@@ -1,9 +1,9 @@
-&HEAD CHID='FF_fia'/
-&TIME T_END=1/
+&HEAD CHID='FF_fia_BF'/
+&TIME T_END=200/
 
 !! DOMAIN
 &MESH IJK=50,50,53, XB=0,25,0,25,0,25, MULT_ID='mm', TRNZ_ID='trnz'/
-&MULT ID='mm', DX=25,DY=25,DZ=25,I_UPPER=0,J_UPPER=0/
+&MULT ID='mm', DX=25,DY=25,DZ=25,I_UPPER=3,J_UPPER=3/
 &TRNZ ID='trnz', CC=1.88679245283, PC=1.0 /
 &TRNZ ID='trnz', CC=3.30188679245, PC=2.0 /
 
@@ -17,12 +17,12 @@
 &WIND SPEED=1., DIRECTION=270/
 
 !! IGNITION
-&SURF ID='IGN FIRE', HRRPUA=500., COLOR='RED', RAMP_Q='fireramp' /
+&SURF ID='IGN FIRE', HRRPUA=6000., COLOR='RED', RAMP_Q='fireramp' /
 &RAMP ID='fireramp', T= 0., F=0. /
 &RAMP ID='fireramp', T= 2., F=1. /
-&RAMP ID='fireramp', T=30., F=1. /
-&RAMP ID='fireramp', T=31., F=0. /
-&VENT XB=5,6,5,20,0,0, SURF_ID='IGN FIRE'/
+&RAMP ID='fireramp', T=60., F=1. /
+&RAMP ID='fireramp', T=61., F=0. /
+&VENT XB=45,46,45,60,0,0, SURF_ID='IGN FIRE'/
 
 !! SURFACE FUEL
 ! Combined surface (grass-litter)
