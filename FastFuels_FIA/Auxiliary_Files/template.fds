@@ -1,0 +1,48 @@
+! Douglas-fir
+&SURF ID                                         = 'douglas-fir'
+      MATL_ID(1,1)                              = 'GENERIC VEGETATION'
+      MATL_MASS_FRACTION(1,1)   = 1.0
+      MOISTURE_FRACTION             = 1.0
+      SURFACE_VOLUME_RATIO      = 3422.
+      LENGTH                                      = 0.05
+      GEOMETRY                                = 'CYLINDRICAL' /
+&PART ID='foliage', DRAG_COEFFICIENT=2.8, SAMPLING_FACTOR=10, SURF_ID='douglas-fir'
+      QUANTITIES='PARTICLE TEMPERATURE','PARTICLE MASS', STATIC=.TRUE., COLOR='FOREST GREEN' /
+&INIT PART_ID='douglas-fir', BULK_DENSITY_FILE='foliage_part_3422.bdf' /
+
+
+! Ponderosa pine
+&SURF ID                                         = 'ponderosa-pine'
+      MATL_ID(1,1)                              = 'GENERIC VEGETATION'
+      MATL_MASS_FRACTION(1,1)   = 1.0
+      MOISTURE_FRACTION             = 1.0
+      SURFACE_VOLUME_RATIO      = 3588.
+      LENGTH                                      = 0.10
+      GEOMETRY                                = 'CYLINDRICAL' /
+&PART ID='foliage', DRAG_COEFFICIENT=2.8, SAMPLING_FACTOR=10, SURF_ID='ponderosa-pine'
+      QUANTITIES='PARTICLE TEMPERATURE','PARTICLE MASS', STATIC=.TRUE., COLOR='BURNT ORANGE ' /
+&INIT PART_ID='ponderosa-pine', BULK_DENSITY_FILE='foliage_part_3588.bdf' /
+
+! Grass surface
+&SURF ID                                         = 'surface-grass'
+      MATL_ID(1,1)                              = 'GENERIC VEGETATION'
+      MATL_MASS_FRACTION(1,1)   = 1.0
+      MOISTURE_FRACTION             = 0.15
+      SURFACE_VOLUME_RATIO      = 9770.
+      LENGTH                                      = 0.10
+      GEOMETRY                                = 'CYLINDRICAL' /
+&PART ID='foliage', DRAG_COEFFICIENT=2.8, SAMPLING_FACTOR=10, SURF_ID='surface-grass'
+      QUANTITIES='PARTICLE TEMPERATURE','PARTICLE MASS', STATIC=.TRUE., COLOR='BURNT ORANGE ' /
+&INIT PART_ID='surface-grass', BULK_DENSITY_FILE='foliage_part_9770.bdf' /
+
+! Litter surface
+&SURF ID                                         = 'surface-litter'
+      MATL_ID(1,1)                              = 'GENERIC VEGETATION'
+      MATL_MASS_FRACTION(1,1)   = 1.0
+      MOISTURE_FRACTION             = 0.15
+      SURFACE_VOLUME_RATIO      = 8000.
+      LENGTH                                      = 0.10
+      GEOMETRY                                = 'CYLINDRICAL' /
+&PART ID='foliage', DRAG_COEFFICIENT=2.8, SAMPLING_FACTOR=10, SURF_ID='surface-litter'
+      QUANTITIES='PARTICLE TEMPERATURE','PARTICLE MASS', STATIC=.TRUE., COLOR='BURNT ORANGE ' /
+&INIT PART_ID='surface-litter', BULK_DENSITY_FILE='foliage_part_8000.bdf' /
